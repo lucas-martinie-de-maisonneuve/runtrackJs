@@ -1,14 +1,15 @@
 function nbrPremier(nbr) {
-    for(var i = 2; i < nbr; i++)
-        if(nbr%i === 0)
+    for(i = 2; i < nbr; i++)
+        if(nbr % i === 0)
             return false;
-    return nbr > 1;
+    return nbr;
   }
 
 function sommeNombresPremiers(a, b){
-    if (nbrPremier(a) && nbrPremier(b))
+    if (nbrPremier(a) && nbrPremier(b)){
         console.log(a+b)
-    
+        return a+b
+    }
     else
         console.log("false")
         return false
