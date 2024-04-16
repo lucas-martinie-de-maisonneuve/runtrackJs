@@ -1,15 +1,16 @@
-function bisextile(année) {
-    if ((année % 4 === 0 && année % 100 !== 0) || année % 400 === 0) {
-        return true;
-    } else {
-        return false;
+document.addEventListener('keydown', function(event) {
+    var textarea = document.getElementById('keylogger');
+    
+    if (document.activeElement === textarea) {
+        event.preventDefault();
     }
-}
 
-const année1 = 2000;
-const année2 = 2001;
-const année3 = 2004;
-
-console.log(année1, bisextile(année1));
-console.log(année2, bisextile(année2));
-console.log(année3, bisextile(année3));
+    if (event.key.match(/^[a-z]$/i)) {
+        if (document.activeElement === textarea) {
+            textarea.value += event.key + event.key;
+        } 
+        else {
+            textarea.value += event.key;
+        }
+    }
+});
