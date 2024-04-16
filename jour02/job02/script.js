@@ -1,9 +1,9 @@
 function showhide() {
-    var article = document.getElementById("article");
-    if (article.style.display === "none") {
-        article.style.display = "block";
-    }
-    else {
+    var article = document.querySelector("article");
+
+    if (article.style.display === "block" || article.style.display === "") {
         article.style.display = "none";
+    } else {
+        article.style.display = "block";
     }
 }

@@ -11,6 +11,5 @@ function tri(numbers = [], order) {
     return numbers; 
 }
 
-// Exemple d'utilisation
 tri([80, 9, 70, 40, 1, 5, 200], "asc");
 tri([80, 9, 70, 40, 1, 5, 200], "desc");
