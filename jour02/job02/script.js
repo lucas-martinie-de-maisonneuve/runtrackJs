@@ -1,9 +1,13 @@
-function showhide() {
-    var article = document.querySelector("article");
+var article = null;
 
-    if (article.style.display === "block" || article.style.display === "") {
-        article.style.display = "none";
+function showhide() {
+    if (!article) {
+        article = document.querySelector("article");
+        if (!article) return;
+    }
+    if (article.parentNode === document.body) {
+        document.body.removeChild(article);
     } else {
-        article.style.display = "block";
+        document.body.appendChild(article);
     }
 }
