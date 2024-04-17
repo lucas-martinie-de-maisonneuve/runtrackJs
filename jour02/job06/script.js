@@ -1,23 +1,21 @@
-const body = document.body;
+document.addEventListener("DOMContentLoaded", function () {
 
-body.classList.add('hidden');
+    const konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    let i = 0;
 
+    function konamiCode(event) {
+        const key = event.key;
 
-const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-let konamiIndex = 0;
+        if (key === konami[i]) {
+            i++;
 
-function checkKonamiCode(event) {
-    const key = event.key;
-
-    if (key === konamiSequence[konamiIndex]) {
-        konamiIndex++;
-
-        if (konamiIndex === konamiSequence.length) {
-            body.classList.remove('hidden');
+            if (i === konami.length) {
+                document.body.classList.add('color');
+            }
+        } else {
+            i = 0;
         }
-    } else {
-        konamiIndex = 0;
     }
-}
 
-document.addEventListener('keydown', checkKonamiCode);
+    document.addEventListener('keydown', konamiCode);
+});
