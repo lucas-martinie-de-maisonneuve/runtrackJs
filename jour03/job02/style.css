@@ -1,0 +1,39 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+#arc-en-ciel {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+img {
+    height: 300px;
+    width: 100px;
+}
+#spacer {
+    width: 620px;
+    height: 300px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#melanger {
+margin-left: 45%;
+width:100px
+}
+
+
+p {
+    text-align: center;
+    font-size: 30px;
+}
+
+#win {
+    color: rgb(10, 184, 10)
+}
+
+#lose {
+    color: red
+}

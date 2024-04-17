@@ -4,9 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let i = 0;
 
     function konamiCode(event) {
-        const key = event.key;
 
-        if (key === konami[i]) {
+        if (event.key === konami[i]) {
             i++;
 
             if (i === konami.length) {
