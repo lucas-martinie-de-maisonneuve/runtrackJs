@@ -1,15 +1,23 @@
-function fizzbuzz() {
-    for (let i = 1; i <= 151; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("FizzBuzz");
-        } else if (i % 3 === 0) {
-            console.log("Fizz");
-        } else if (i % 5 === 0) {
-            console.log("Buzz");
-        } else {
-            console.log(i);
+const body = document.body;
+
+body.classList.add('hidden');
+
+
+const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+let konamiIndex = 0;
+
+function checkKonamiCode(event) {
+    const key = event.key;
+
+    if (key === konamiSequence[konamiIndex]) {
+        konamiIndex++;
+
+        if (konamiIndex === konamiSequence.length) {
+            body.classList.remove('hidden');
         }
+    } else {
+        konamiIndex = 0;
     }
 }
 
-fizzbuzz();
+document.addEventListener('keydown', checkKonamiCode);
