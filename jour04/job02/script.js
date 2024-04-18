@@ -1,6 +1,6 @@
 
 function jsonValueKey(json, key) {
-    console.log(json[key])
+    return json[key]
 }
 
 let json = {
@@ -14,5 +14,5 @@ let json = {
 key1 = "name"
 key2 = "city"
 
-jsonValueKey(json, key1);
-jsonValueKey(json, key2);
+console.log(jsonValueKey(json, key1));
+console.log(jsonValueKey(json, key2));
