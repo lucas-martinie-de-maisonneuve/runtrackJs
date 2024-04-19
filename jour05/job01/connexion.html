@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>Connexion</h1>
+        </div>
+        <nav>
+            <a href="connexion.html"><button>Connexion</button></a>
+            <a href="inscription.html"><button>Inscription</button></a>
+        </nav>
+    </header>
+    <div>
+    </div>
+    <form id="connexionForm">
+        <div>
+            <p id="emailError" class="error"></p>
+            <input type="email" id="email" name="email" placeholder="Email">
+        </div>
+        <div>
+            <p id="passwordError" class="error"></p>
+            <input type="password" id="password" name="password" placeholder="Mot de passe">
+        </div>
+        <div class="bouton">
+            <button id="button_login">Se connecter</button>
+        </div>
+    </form>
+<footer>
+    <p>Formulaire Inscription/Connexion © Lucas Martinie de Maisonneuve - LaPlateforme</p>
+</footer>
+</body>
+
+</html>
